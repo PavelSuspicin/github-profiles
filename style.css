@@ -82,6 +82,7 @@ body {
 .user-info ul li {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .user-info ul li strong {
