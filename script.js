@@ -21,7 +21,7 @@ async function getRepos(username) {
         const { data } = await axios(APIURL + username + '/repos?sort=created')
         addReposToCard(data)
     } catch (err) {
-        createErrorCard('Problem fetching repos')
+        createErrorCard('No profile with this username')
     }
 }
 
@@ -73,7 +73,6 @@ function addReposToCard(repos) {
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-
     const user = search.value
 
     if (user) {
